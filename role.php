@@ -2,11 +2,16 @@
 class role
 {
     private $_rolename;
-    private $_actor;
+    private $_casting;
 
-    public function __construct($rolename, $actor)
+    public function __construct($rolename)
     {
         $this->_rolename = $rolename;
-        $this->_actor = $actor;
+        $this->_casting = [];
+    }
+
+    public function addcasting($newcasting)
+    {
+        array_push($this->_casting, $newcasting);
     }
 }

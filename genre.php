@@ -2,10 +2,11 @@
 class genre
 {
     private $_genrename;
-    private $_movies;
-    private function __Construct($genrename, Movie $movies)
+    private $_casting;
+
+    public function __Construct($genrename)
     {
         $this->_genrename = $genrename;
-        $this->_movies = $movies;
+        $this->_casting = [];
     }
 }
