@@ -29,5 +29,4 @@ class Casting
     {
         return $this->_actor;
     }
-    
 }

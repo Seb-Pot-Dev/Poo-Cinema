@@ -2,16 +2,29 @@
 class role
 {
     private $_rolename;
-    private $_casting;
+    private $_castings;
 
     public function __construct($rolename)
     {
         $this->_rolename = $rolename;
-        $this->_casting = [];
+        $this->_castings = [];
     }
 
     public function addcasting($newcasting)
     {
-        array_push($this->_casting, $newcasting);
+        $this->_castings[] = $newcasting;
+    }
+
+    public function __toString()
+    {
+        return $this->_rolename;
+    }
+
+    public function getCasting()
+    {
+        echo $this->_rolename . " a été joué par : <BR>";
+        foreach ($this->_castings as $casting) {
+            echo $casting->getActor() . "<br>";
+        }
     }
 }

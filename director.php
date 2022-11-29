@@ -10,13 +10,14 @@ class Director extends Person
     }
     public function addMovie($movies)
     {
-        array_push($this->_allmovies, $movies);
+        $this->_allmovies[]= $movies;
     }
     public function getInfo()
     {
+        echo "Films réalisés par ".$this." :<br>";
         foreach ($this->_allmovies as $key)
         {
-            echo $key;
+            echo $key."<br>";
         }
     }
     public function __toString()

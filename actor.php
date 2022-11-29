@@ -1,16 +1,16 @@
 <?php
 class Actor extends Person
 {
-    private $_casting;
+    private $_castings;
 
     public function __construct($lastname, $firstname, $sexe, $dateofbirth)
     {
         parent::__construct($lastname, $firstname, $sexe, $dateofbirth);
-        $this->_casting=[];
+        $this->_castings=[];
     }
     function getFilmographie()
     {
-        foreach ($this->_casting as $film)
+        foreach ($this->_castings as $film)
         {
             return $film->getMovie()->getTitle()."<br>";
         }
@@ -18,10 +18,14 @@ class Actor extends Person
 
     public function addcasting($newcasting)
     {
-        array_push($this->_casting, $newcasting);
+        $this->_castings [] = $newcasting;
     }
+
     public function getCasting()
     {
-        return $this->_casting;
-    }
+        foreach ($this->_castings as $casting) 
+        {
+            echo $casting->getActor() ." a joué ". $casting->getRole()."<br>";
+        }
+}
 }
