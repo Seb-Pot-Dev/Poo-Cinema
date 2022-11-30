@@ -20,7 +20,7 @@ class role
         return $this->_rolename;
     }
 
-    public function getCasting()
+    public function dispCasting()
     {
         echo $this->_rolename . " a été joué par : <BR>";
         foreach ($this->_castings as $casting) {

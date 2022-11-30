@@ -15,9 +15,9 @@ class Director extends Person
     public function getInfo()
     {
         echo "Films réalisés par ".$this." :<br>";
-        foreach ($this->_allmovies as $key)
+        foreach ($this->_allmovies as $movie)
         {
-            echo $key."<br>";
+            echo $movie."<br>";
         }
     }
     public function __toString()

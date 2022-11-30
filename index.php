@@ -57,8 +57,10 @@ $casting3 = new Casting ($americanpsycho, $patrickbateman, $christianbale);
 $casting4= new Casting ($darkknight, $joker, $healthledger);
 
 
-echo $darkknight->getGenre()."<br>";
-echo $inception->getGenre()."<br>";
+// echo $darkknight->getGenre()."<br>";
+// echo $inception->getGenre()."<br>";
 
-echo $superhero->getMovies()."<br>";
+// echo $superhero->getMovies()."<br>";
+
+$darkknight->getGenre();
 
